@@ -1,0 +1,17 @@
+<h1>This is our contact page 😎</h1>
+
+<p>These are the people you can contact: </p>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" value="<%= params[:member] %>">
+  <input type="submit">
+</form>
+
+
+<ol>
+  <% @members.each do |member| %>
+  <li><%= member %></li>
+  <% end %>
+</ol>
+
+<%= link_to "Homepage", home_path %>
